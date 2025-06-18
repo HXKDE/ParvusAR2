@@ -1224,7 +1224,7 @@ end
 Loot.DescendantAdded:Connect(function(Item)
     if Item:IsA("CFrameValue") then
         local ItemData = ReplicatedStorage.ItemData:FindFirstChild(Item.Name, true)
-        if not ItemData then return end --print(ItemData.Parent.Name)
+        if not ItemData then return end print(ItemData.Parent.Name)
 
         Parvus.Utilities.Drawing:AddObject(Item, Item.Name, Item.Value.Position,
             "AR2/ESP/Items", "AR2/ESP/Items/" .. ItemData.Parent.Name, Window.Flags
